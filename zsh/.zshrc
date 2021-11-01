@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 source /home/adeon/opt_sw/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Activate Neofetch on terminal start
 neofetch
+
