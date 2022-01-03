@@ -6,4 +6,8 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-polybar bar
+polybar bar &
+
+if [[ $(xrandr -q | grep 'HDMI2 connected') ]]; then
+	polybar bar_second_screen &
+fi

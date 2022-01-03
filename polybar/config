@@ -12,6 +12,7 @@ empty_foreground = #14536c
 override-redirect = false 
 wm-restack = bspwm
 bottom = false
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 fixed-center = true
@@ -29,7 +30,12 @@ font-0 = Source Code Pro:style=Bold:pixelsize=10;3
 
 modules-left = ncspot
 modules-center = bspwm
-modules-right = alsa battery time wlan1
+modules-right = alsa battery time network
+
+[bar/bar_second_screen]
+monitor = HDMI2
+modules-right = time
+inherit = bar/bar
 
 [module/rofi]
 type = custom/text
@@ -116,7 +122,7 @@ format-full-padding = 2
 
 [module/network]
 type = internal/network
-interface = vlan0
+interface = wlan0
 interval = 3.0
 unknown-as-up = true
 accumulate-stats = true
@@ -124,8 +130,8 @@ accumulate-stats = true
 format-connected = WIFI: <label-connected>
 label-connected = %essid%
 format-connected-padding = 2
-format-connected-foreground = #6c8c9c
-label-connected-foreground = ${colors.color8}
+format-connected-foreground = ${colors.secondary}
+label-connected-foreground = ${colors.primary}
 
 [module/alsa]
 type = internal/alsa

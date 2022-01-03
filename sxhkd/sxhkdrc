@@ -7,7 +7,7 @@ super + Return
 	urxvt
 
 # program launcher
-ctrl + alt + r
+super + r
 	ulauncher
 
 ctrl + alt + t
@@ -152,5 +152,5 @@ ctrl + super + Print
 	maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png   
 
 # Lock screen
-super + alt + Escape
-	betterlockscreen -l
+super + shift + x
+	betterlockscreen -l dim

@@ -2,7 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+if xrandr -q | grep 'HDMI2 connected'; then
+  xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal --output HDMI2 --mode 1920x1080 --rotate normal --right-of eDP1
+  bspc monitor eDP1 -d I II III IV V
+  bspc monitor HDMI2 -d VI VII VIII IX X
+else
+  bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
+fi
+
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -24,11 +31,11 @@ bspc config normal_border_color \#052F3F
 # Change keyboard layout
 setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle
 
-# Launch Picom
-picom -I 0.1 -O 0.1
-
 # Change Background
 feh --bg-fill ~/.dotfiles/backgrounds/red_cyan_futuristic.png
 
 # Launch Polybar
 bash ~/.config/polybar/launch.sh
+
+# Launch Picom
+picom -I 0.1 -O 0.1
