@@ -32,7 +32,12 @@ modules-left = ncspot
 modules-center = bspwm
 modules-right = alsa battery time network
 
-[bar/bar_second_screen]
+[bar/bar_HDMI1]
+monitor = HDMI1
+modules-right = time
+inherit = bar/bar
+
+[bar/bar_HDMI2]
 monitor = HDMI2
 modules-right = time
 inherit = bar/bar
