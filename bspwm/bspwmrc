@@ -32,6 +32,7 @@ bspc rule -a Screenkey manage=off
 bspc config active_border_color \#14536C
 bspc config focused_border_color \#14536C
 bspc config normal_border_color \#052F3F
+
 # Change keyboard layout
 setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle
 
