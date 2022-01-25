@@ -29,9 +29,9 @@ tray-padding = 5
 font-0 = Source Code Pro:style=Bold:pixelsize=10;3
 font-1 = UbuntuMono Nerd Font:style=Bold:pixelsize=14;3
 
-modules-left = memory cpu
+modules-left = memory cpu temperature
 modules-center = bspwm
-modules-right = xkeyboard alsa battery time network
+modules-right = backlight xkeyboard alsa battery time network
 
 [bar/bar_HDMI1]
 monitor = HDMI1
@@ -125,6 +125,63 @@ layout-icon-1 = us;US
 
 label-indicator-on-capslock = בּ
 label-indicator-off-capslock = 
+
+[module/temperature]
+type = internal/temperature
+
+; Seconds to sleep between updates
+interval = 1
+
+; Thermal zone to use
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+hwmon-path = /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input
+
+; Base temperature for where to start the ramp (in degrees celsius)
+base-temperature = 20
+
+; Threshold temperature to display warning label (in degrees celsius)
+warn-temperature = 60
+
+units = false
+
+; Format default
+format = <ramp> <label>
+format-padding = 2
+format-foreground = ${colors.primary}
+
+; Format Warn
+format-warn = <ramp> <label-warn>
+format-warn-padding = 2
+format-warn-foreground = ${colors.primary}
+
+label = %temperature-c%°C
+
+label-warn = WARNING %temperature-c%°C
+
+; Ramp Icons
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+use-actual-brightness = true
+; Enable changing the backlight with the scroll wheel
+enable-scroll = true
+
+format = <ramp>  <label>
+format-padding = 2
+format-foreground = ${colors.primary}
+
+; Percentage
+label = %percentage%%
+; Icon
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 [module/battery]
 ;https://github.com/jaagr/polybar/wiki/Module:-battery
