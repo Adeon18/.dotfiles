@@ -28,4 +28,6 @@ _For more information check out **issues and projects**.
 
 _Here is how the rice currently looks:_
 
-:D
+![futuristic_red](./rice_imgs/futuristic_red.png)
+
+**:D**
