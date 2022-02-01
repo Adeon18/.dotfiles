@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + r
-	ulauncher
+	rofi -show run
 
 ctrl + alt + t
 	kitty
