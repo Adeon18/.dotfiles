@@ -142,7 +142,7 @@ hwmon-path = /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input
 base-temperature = 20
 
 ; Threshold temperature to display warning label (in degrees celsius)
-warn-temperature = 60
+warn-temperature = 75
 
 units = false
 
