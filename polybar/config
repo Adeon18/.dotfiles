@@ -206,6 +206,10 @@ format-discharging-underline = #c7ae25
 format-discharging-foreground = ${colors.primary}
 format-discharging-background = ${colors.background}
 
+label-full =  %percentage%%
+label-full-padding = 2
+label-full-foreground = ${colors.primary}
+
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
