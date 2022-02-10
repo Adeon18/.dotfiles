@@ -10,6 +10,9 @@ super + Return
 super + r
 	rofi -show run
 
+ctrl + alt + r
+	ulauncher
+
 ctrl + alt + t
 	kitty
 
