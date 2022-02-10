@@ -157,3 +157,10 @@ ctrl + super + Print
 # Lock screen
 super + shift + x
 	betterlockscreen -l
+
+# Me Specific
+super + shift + s
+	systemctl suspend
+
+super + shift + p
+	systemctl poweroff
