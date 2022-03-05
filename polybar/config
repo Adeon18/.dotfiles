@@ -29,7 +29,7 @@ tray-padding = 5
 font-0 = Source Code Pro:style=Bold:pixelsize=10;3
 font-1 = UbuntuMono Nerd Font:style=Bold:pixelsize=14;3
 
-modules-left = memory cpu temperature system-fan-speed
+modules-left = rofi memory cpu temperature system-fan-speed
 modules-center = bspwm
 modules-right = backlight xkeyboard alsa battery time network
 
@@ -45,11 +45,11 @@ inherit = bar/bar
 
 [module/rofi]
 type = custom/text
-content = MENU
-click-left = rofi -show drun -location 1 -xoffset 39 -yoffset 73
-click-right = rofi -show window -location 1 -xoffset 39 -yoffset 73
+content = 
+click-left = rofi -show drun -location 1 -xoffset 0 -yoffset 32
+click-right = rofi -show window -location 1 -xoffset 0 -yoffset 32
 enable-click = true
-content-foreground = #a09f69
+content-foreground = ${colors.primary}
 content-padding = 2
 
 [module/bspwm]
