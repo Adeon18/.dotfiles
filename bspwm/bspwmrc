@@ -45,5 +45,8 @@ bash ~/.config/polybar/launch.sh
 # Launch Picom
 picom -I 0.1 -O 0.1 &
 
+# Notification Service
+dunst &
+
 # Startup Sound
 mpv --no-video ~/.dotfiles/startup_sounds/startup_sound.mp3

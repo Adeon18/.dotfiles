@@ -31,7 +31,7 @@ font-1 = UbuntuMono Nerd Font:style=Bold:pixelsize=14;3
 
 modules-left = rofi memory cpu temperature system-fan-speed
 modules-center = bspwm
-modules-right = backlight xkeyboard alsa battery time network
+modules-right = backlight xkeyboard alsa battery nbat time network
 
 [bar/bar_HDMI1]
 monitor = HDMI1
@@ -239,6 +239,11 @@ animation-charging-5 = 
 animation-charging-6 = 
 animation-charging-foreground = ${colors.primary}
 animation-charging-framerate = 650
+
+[module/nbat]
+type = custom/script
+exec = ~/.dotfiles/polybar/bat-notifier.sh
+interval = 20
 
 [module/network]
 type = internal/network
