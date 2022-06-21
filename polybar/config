@@ -242,8 +242,8 @@ animation-charging-framerate = 650
 
 [module/nbat]
 type = custom/script
-exec = ~/.dotfiles/polybar/bat-notifier.sh
-interval = 20
+exec = ~/.dotfiles/scripts/bat-notifier.sh
+interval = 5
 
 [module/network]
 type = internal/network
@@ -313,7 +313,7 @@ format-prefix-foreground = ${colors.primary}
 
 [module/system-fan-speed]
 type = custom/script
-exec = ~/.dotfiles/polybar/system-fan-speed.sh
+exec = ~/.dotfiles/scripts/system-fan-speed.sh
 label = %output%
 label-foreground = ${colors.primary}
 label-padding = 2
