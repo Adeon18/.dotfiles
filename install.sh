@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-#
+# A rice install script that replaces all of the inportant configs with the rice configs.
+# ./install.sh -h for help
+
 readonly DEP_FILE="dependencies.txt"
 readonly SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
 
@@ -105,7 +107,7 @@ do
     elif [[ "$ignore_uninstalled" == true ]]; then
       echo "Ignoring ${dependancy} as it is NOT installed."
     elif [[ "$install_if_uninstalled" == true ]]; then
-      echo "Here goes the code that is no here yet"
+      echo "No dependancy ${dependancy}, here should be installation code... "
     fi
   else
     installed_dependancies+=(${dependancy})
@@ -133,7 +135,5 @@ do
   sleep 0.2
 done
 
-
-if ! [[ -f "${HOME}/.xinitrc" ]]; then
-  echo "exec bspwm" > ~/.xinitrc
-fi
+echo "-----------"
+echo "Everything has been configured! Enjoy!"
