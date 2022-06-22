@@ -1,0 +1,7 @@
+bspwm
+sxhkd
+dunst
+kitty
+polybar
+neofetch
+rofi
