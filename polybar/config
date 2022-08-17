@@ -31,7 +31,7 @@ font-1 = UbuntuMono Nerd Font:style=Bold:pixelsize=14;3
 
 modules-left = rofi memory cpu temperature system-fan-speed
 modules-center = bspwm
-modules-right = backlight xkeyboard alsa battery nbat time network
+modules-right = backlight xkeyboard alsa battery nbat time network-wireless network-wired
 
 [bar/bar_HDMI1]
 monitor = HDMI1
@@ -57,7 +57,7 @@ type = internal/bspwm
 index-sort = true
 enable-click = true
 format = <label-state>
-foramt-prefix-padding = 2
+format-prefix-padding = 2
 pin-workspaces = true
 
 label-empty-foreground = ${empty_foreground}
@@ -245,18 +245,35 @@ type = custom/script
 exec = ~/.dotfiles/scripts/bat-notifier.sh
 interval = 5
 
-[module/network]
+[module/network-wired]
+type = internal/network
+interface = enp0s20f0u4 
+interval = 3.0
+unknown-as-up = true
+
+format-connected =  
+format-connected-padding = 2
+format-connected-foreground = ${colors.secondary}
+label-connected-foreground = ${colors.primary}
+
+format-packetloss = ﮙ  <format-connected>
+format-packetloss-foreground = ${colors.secondary}
+
+[module/network-wireless]
 type = internal/network
 interface = wlan0
 interval = 3.0
 unknown-as-up = true
 accumulate-stats = true
 
-format-connected =   <label-connected>
+format-connected = 直  <label-connected>
 label-connected = %essid%
 format-connected-padding = 2
 format-connected-foreground = ${colors.secondary}
 label-connected-foreground = ${colors.primary}
+
+format-packetloss = ﮙ  <label-connected>
+format-packetloss-foreground = ${colors.secondary}
 
 [module/alsa]
 type = internal/alsa
