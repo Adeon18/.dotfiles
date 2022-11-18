@@ -17,13 +17,17 @@ _What is already done:_
 - Rofi setup
 - Some cool backgrounds.
 - A bugged and definately not usable i3 script.
-- `install.sh` script that can help you install the rice(has a descriptio with the help of `./install.sh -h`)
+- `install.sh` script that can help you install the rice(has a description with the help of `./install.sh -h`)
 
 _Some of the things I plan to add:_
 - Microphone control.
 - Better install script
 
-_For more information check out **issues and projects**.
+_For more information check out **issues and projects**._
+
+## Configuration
+
+_If you have a fresh arch install - here is a [list](./config.md) of configuration steps and programs for you to refer to.
 
 ## ShowCase
 
