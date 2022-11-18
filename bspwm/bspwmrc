@@ -49,5 +49,11 @@ picom -I 0.1 -O 0.1 &
 # Notification Service
 dunst &
 
+# For Java apps
+wmname LG3D
+
+# Make custom cursor be visible everywhere
+xsetroot -cursor_name left_ptr
+
 # Startup Sound
 mpv --no-video ~/.dotfiles/startup_sounds/startup_sound.mp3

@@ -134,6 +134,9 @@ XF86AudioRaiseVolume
 XF86AudioMute
   amixer set Master toggle
 
+XF86AudioMicMute
+	amixer set Capture toggle
+
 # Brightness control
 XF86MonBrightnessDown
 	xbacklight -dec 5
@@ -150,6 +153,7 @@ ctrl + Print
 
 super + shift + Print
 	maim --select | xclip -selection clipboard -t image/png
+maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
 
 ctrl + super + Print
 	maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png   
