@@ -27,7 +27,7 @@ _For more information check out **issues and projects**._
 
 ## Configuration
 
-_If you have a fresh arch install - here is a [list](./config.md) of configuration steps and programs for you to refer to.
+_If you have a fresh arch install - here is a [list](./config.md) of configuration steps and programs for you to refer to._
 
 ## ShowCase
 
