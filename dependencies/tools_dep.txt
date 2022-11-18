@@ -1,0 +1,10 @@
+libreoffice-still
+git
+github-cli
+cmake
+clang
+gcc
+tree
+zsh
+bluez
+neovim

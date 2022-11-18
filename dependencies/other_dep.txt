@@ -1,0 +1,20 @@
+telegram-desktop
+betterlockscreen
+nerd-fonts
+notion
+teams
+jupyter-notebook
+vlc
+spotify
+code
+gnome-tweaks
+lxappearence
+python3
+oreo cursors
+pip
+clion
+boost
+terminal-parrot
+obsidian
+mpv
+godot

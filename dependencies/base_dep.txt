@@ -1,0 +1,15 @@
+alsa-utils
+polybar
+picom
+feh
+acpi
+wmname
+maim
+dunst
+xclip
+ranger
+bspwm
+neofetch
+htop
+sxhkd
+tlp
